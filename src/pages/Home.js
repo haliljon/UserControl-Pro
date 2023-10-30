@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from 'react-router-dom';
 import Table from '../components/Table'
 import Registration from "../components/auth/Registration";
-
+import Login from "../components/auth/Login";
 // export default class Home extends React.Component {
 //     constructor(props) {
 //         super(props);
@@ -41,6 +41,7 @@ const Home = (props) => {
             <h2>Status: {props.loggedInStatus}</h2>
             <Table striped bordered hover />
             <Registration handleSuccessfulAuth={handleSuccessfulAuth} />
+            <Login handleSuccessfulAuth={handleSuccessfulAuth} />
         </div>
     );
 };

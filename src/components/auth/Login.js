@@ -22,28 +22,27 @@ export default class Registration extends React.Component {
     }
 
     handleSubmit(e) {
-        axios.post("http://localhost:3001/registrations", {
+        axios.post("http://localhost:3001/sessions", {
             user: {
                 email: this.state.email,
-                password: this.state.password,
-                password_confirmation: this.state.password_confirmation
+                password: this.state.password
             }
         }, { withCredentials: true })
             .then(response => {
-                if (response.data.status === 'created') {
+                console.log('Logged In', response);
+                if (response.data.logged_in) {
                     this.props.handleSuccessfulAuth(response.data);
-                    console.log('Created', response.data);
                 }
             })
             .catch(error => {
-                console.log("registration error", error);
+                console.log("login error", error);
             });
         e.preventDefault();
     }
     render() {
         return (
             <div>
-                <h1>Registration</h1>
+                <h1>Login</h1>
                 <form onSubmit={this.handleSubmit}>
                     <input
                         type="email"
@@ -61,15 +60,7 @@ export default class Registration extends React.Component {
                         onChange={this.handleChange}
                         required
                     /><br />
-                    <input
-                        type="password"
-                        name="password_confirmation"
-                        placeholder="Password Confirmation"
-                        value={this.state.password_confirmation}
-                        onChange={this.handleChange}
-                        required
-                    /><br />
-                    <button type="submit">Register</button>
+                    <button type="submit">Login</button>
                 </form>
             </div >
         )
