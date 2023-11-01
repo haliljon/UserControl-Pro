@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import Dashboard from './pages/Dashboard';
+
 
 function App() {
   const [loggedInStatus, setLoggedInStatus] = useState('NOT_LOGGED_IN');
@@ -13,6 +13,10 @@ function App() {
   const handleLogin = (data) => {
     setLoggedInStatus('LOGGED_IN');
     setUser(data.user);
+  }
+  const handleLogout = () => {
+    setLoggedInStatus('NOT_LOGGED_IN');
+    setUser({});
   }
 
   const checkLoginStatus = () => {
@@ -35,10 +39,9 @@ function App() {
 
   return (
     <div>
-      <Navbar />
+      <Navbar handleLogout={handleLogout} />
       <Routes>
-        <Route exact path="/" element={<Home handleLogin={handleLogin} loggedInStatus={loggedInStatus} />} />
-        <Route path="/dashboard" element={<Dashboard loggedInStatus={loggedInStatus} />} />
+        <Route path="/" element={<Home username={user.username} handleLogin={handleLogin} loggedInStatus={loggedInStatus} />} />
       </Routes>
     </div>
   );

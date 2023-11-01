@@ -25,8 +25,10 @@ export default class Registration extends React.Component {
         axios.post("http://localhost:3001/registrations", {
             user: {
                 email: this.state.email,
+                username: this.state.username,
                 password: this.state.password,
-                password_confirmation: this.state.password_confirmation
+                password_confirmation: this.state.password_confirmation,
+                position: this.state.position,
             }
         }, { withCredentials: true })
             .then(response => {
@@ -54,6 +56,21 @@ export default class Registration extends React.Component {
                         required
                     /><br />
                     <input
+                        type="text"
+                        name="username"
+                        placeholder="Username"
+                        value={this.state.username}
+                        onChange={this.handleChange}
+                        required /><br />
+                    <input
+                        type="text"
+                        name="position"
+                        placeholder="Position"
+                        value={this.state.position}
+                        onChange={this.handleChange}
+                        required />
+                    <br />
+                    <input
                         type="password"
                         name="password"
                         placeholder="Password"
@@ -67,11 +84,11 @@ export default class Registration extends React.Component {
                         placeholder="Password Confirmation"
                         value={this.state.password_confirmation}
                         onChange={this.handleChange}
-                        required
-                    /><br />
-                    <button type="submit">Register</button>
-                </form>
+                        required/>
+                    <br />
+                    <button button type="submit">Register</button>    
+                </form >
             </div >
-        )
+        ) 
     }
 }
