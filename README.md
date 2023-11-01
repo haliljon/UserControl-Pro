@@ -18,10 +18,8 @@
     - [Install](#install)
     - [Usage](#usage)
   - [👤 Author ](#-author-)
-  - [🔭 Future Features ](#-future-features-)
-  - [🤝 Contributing ](#-contributing-)
+  - [🤝 Contributing](#contributing)
   - [⭐️ Show your support ](#️-show-your-support-)
-  - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
 
 # UserControl Pro 🧑🏻‍💻 <a name="about-project"></a>
@@ -35,7 +33,10 @@
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    > <li><a href="https://reactjs.org/">React.js</a></li>
+    > <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
+    > <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
+    > <li><a href="https://www.postgresql.org/">Postgresql</a></li>
   </ul>
 </details>
 
