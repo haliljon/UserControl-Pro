@@ -37,16 +37,18 @@
     > <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
     > <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
     > <li><a href="https://www.postgresql.org/">Postgresql</a></li>
+    > <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
   </ul>
 </details>
 
 ### App Screenshot
 
-![screenshot]()
+<img width="1388" alt="Screenshot 2023-11-02 at 1 17 19 AM" src="https://github.com/haliljon/UserControl-Pro/assets/110017001/755c80a8-0a73-4429-b9e2-c59ac5cc878a">
+
 
 ### Back-end Repository
 
-- Here is the link of the [Back-End](https://github.com/haliljon/UserControl-Pro-back-end.git)
+- Here is the link to the [Back-End](https://github.com/haliljon/UserControl-Pro-back-end.git)
 
 <!-- GETTING STARTED -->
 
