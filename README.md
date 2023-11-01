@@ -81,7 +81,7 @@ Clone this repository using the GitHub link provided below.
 In the terminal, go to your file directory and run this command.
 
 ```
-$ git clone https://github.com/haliljon/Task-4-Itransition.git
+$ git clone https://github.com/haliljon/UserControl-Pro.git
 ```
 
 ### Usage
@@ -117,7 +117,7 @@ The page will reload when you make changes.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/haliljon/Task-4-Itransition/issues/).
+Feel free to check the [issues page](https://github.com/haliljon/UserControl-Pro/issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
