@@ -6,22 +6,21 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 
-
 function App() {
   const [loggedInStatus, setLoggedInStatus] = useState('NOT_LOGGED_IN');
   const [user, setUser] = useState({});
   const handleLogin = (data) => {
     setLoggedInStatus('LOGGED_IN');
     setUser(data.user);
-  }
+  };
   const handleLogout = () => {
     setLoggedInStatus('NOT_LOGGED_IN');
     setUser({});
-  }
+  };
 
   const checkLoginStatus = () => {
     axios.get('https://user-control-pro-6d69dacacf7c.herokuapp.com/logged_in', { withCredentials: true })
-      .then(response => {
+      .then((response) => {
         if (response.data.logged_in && loggedInStatus === 'NOT_LOGGED_IN') {
           setLoggedInStatus('LOGGED_IN');
           setUser(response.data.user);
@@ -30,9 +29,10 @@ function App() {
           setUser({});
         }
       })
-      .catch(error => { console.log('check login error', error); });
-  }
+      .catch((error) => { console.log('check login error', error); });
+  };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     checkLoginStatus();
   }, []);
