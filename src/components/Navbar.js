@@ -14,7 +14,7 @@ const Navbar = (props) => {
     return (
 
         <div className="container">
-            <p>Hello! | <button onClick={() => handleLogoutClick()}>Logout</button></p>
+            <p>Hello! | <a href="" onClick={() => handleLogoutClick()}>Logout</a></p>
         </div>
     )
 }
