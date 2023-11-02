@@ -1,6 +1,6 @@
 import React from "react";
 import Table from '../components/Table'
-import Registration from "../components/auth/registration";
+import Registration from "../components/auth/Registration";
 import Login from "../components/auth/Login";
 
 const Home = (props) => {
