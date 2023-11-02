@@ -35,7 +35,7 @@ function App() {
 
   useEffect(() => {
     checkLoginStatus();
-  }, []);
+  }, [checkLoginStatus]);
 
   return (
     <div>
