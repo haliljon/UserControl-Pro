@@ -20,7 +20,7 @@ function App() {
   }
 
   const checkLoginStatus = () => {
-    axios.get('http://localhost:3001/logged_in', { withCredentials: true })
+    axios.get('https://user-control-pro-6d69dacacf7c.herokuapp.com/logged_in', { withCredentials: true })
       .then(response => {
         if (response.data.logged_in && loggedInStatus === 'NOT_LOGGED_IN') {
           setLoggedInStatus('LOGGED_IN');

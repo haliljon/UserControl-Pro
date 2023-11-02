@@ -22,7 +22,7 @@ export default class Registration extends React.Component {
     }
 
     handleSubmit(e) {
-        axios.post("http://localhost:3001/registrations", {
+        axios.post("https://user-control-pro-6d69dacacf7c.herokuapp.com/registrations", {
             user: {
                 email: this.state.email,
                 username: this.state.username,
@@ -84,11 +84,11 @@ export default class Registration extends React.Component {
                         placeholder="Password Confirmation"
                         value={this.state.password_confirmation}
                         onChange={this.handleChange}
-                        required/>
+                        required />
                     <br />
-                    <button button type="submit">Register</button>    
+                    <button button type="submit">Register</button>
                 </form >
             </div >
-        ) 
+        )
     }
 }

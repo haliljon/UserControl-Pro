@@ -8,7 +8,7 @@ const Table = () => {
     // const [checkbox, setCheckbox] = useState([]);
 
     const fetchUsers = async () => {
-        const response = await axios.get('http://localhost:3001/users');
+        const response = await axios.get('https://user-control-pro-6d69dacacf7c.herokuapp.com/users');
         const usersWithCheckbox = response.data.map(user => ({
             ...user,
             checkbox: false
@@ -40,7 +40,7 @@ const Table = () => {
 
     const handleBlock = () => {
         selectedUsers.map((user) => {
-            axios.put(`http://localhost:3001/users/${user}`, {
+            axios.put(`https://user-control-pro-6d69dacacf7c.herokuapp.com/users/${user}`, {
                 status: 'blocked'
             })
                 .then(response => {
@@ -55,7 +55,7 @@ const Table = () => {
 
     const handleUnblock = () => {
         selectedUsers.map((user) => {
-            axios.put(`http://localhost:3001/users/${user}`, {
+            axios.put(`https://user-control-pro-6d69dacacf7c.herokuapp.com/users/${user}`, {
                 status: 'active'
             })
                 .then(response => {
@@ -70,7 +70,7 @@ const Table = () => {
 
     const handleDelete = () => {
         selectedUsers.map((user) => {
-            axios.delete(`http://localhost:3001/users/${user}`)
+            axios.delete(`https://user-control-pro-6d69dacacf7c.herokuapp.com/users/${user}`)
                 .then(response => {
                     console.log('Deleted', response);
                     setSelectedUsers([])
